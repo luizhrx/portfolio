@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="img/fotoDeLuiz.png" alt="Luiz Henrique" width="120" style="border-radius: 50%;" />
-
 # Luiz Henrique — Portfólio Pessoal
 
 **Estudante de Ciência da Computação · Backend · Inteligência Artificial**
