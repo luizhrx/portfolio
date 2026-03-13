@@ -1,0 +1,172 @@
+<!-- ============================================================================= 
+     components/projetos.html — Seção de Projetos
+================================================================================== -->
+     
+
+<section id="projetos" class="py-24 bg-[#020817] relative overflow-hidden">
+
+  
+    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-neon/20 to-transparent"></div>
+
+   
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-neon/3 rounded-full blur-[150px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- Título da seção -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-xs font-mono text-neon/60 tracking-widest uppercase">// projetos.jsx</span>
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-white mt-3 mb-4">
+                Meus <span class="text-neon">Projetos</span>
+            </h2>
+            <p class="text-gray-500 max-w-md mx-auto">
+                Desenvolvidos durante a faculdade e nos estudos pessoais.
+            </p>
+        </div>
+
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- ===== PROJETO 1: Buscador de Filmes ===== -->
+            <div class="project-card relative bg-slate-900/80 rounded-xl overflow-hidden border border-white/8 flex flex-col h-full"
+                 data-aos="fade-up" data-aos-delay="0">
+
+                <!-- Área da imagem com overlay de botões -->
+                <div class="relative h-48 overflow-hidden bg-slate-800">
+                    <img src="img/buscar-filmes.png" alt="Buscador de Filmes"
+                         class="w-full h-full object-cover"
+                         onerror="this.style.display='none'">
+                    <!-- Ícone mostrado se a imagem não carregar -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="clapperboard" class="text-gray-700 w-14 h-14"></i>
+                    </div>
+
+                    <div class="project-overlay rounded-t-xl">
+                        <a href="https://github.com/luizhrx/buscador-filmes" target="_blank"
+                           class="flex items-center gap-2 px-5 py-2.5 bg-white/10 border border-white/20 text-white text-sm font-medium rounded hover:bg-white hover:text-black transition-all backdrop-blur-sm">
+                            <i data-lucide="github" class="w-4 h-4"></i>GitHub
+                        </a>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                </div>
+
+                <!-- Conteúdo do card -->
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-xs font-mono text-neon/40 mb-2">// projeto_01</span>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 leading-tight">
+                        Buscador de Filmes <span class="text-neon/60 text-base">(API OMDb)</span>
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-5 flex-grow leading-relaxed">
+                        Sistema em Java que consome a API OMDb para buscar e exibir detalhes de filmes.
+                        Possui menu interativo no terminal, histórico de buscas e tratamento de JSON com Gson.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs bg-neon/8 text-neon px-2.5 py-1 rounded border border-neon/15 font-mono">Java</span>
+                        <span class="text-xs bg-neon/8 text-neon px-2.5 py-1 rounded border border-neon/15 font-mono">API REST</span>
+                        <span class="text-xs bg-neon/8 text-neon px-2.5 py-1 rounded border border-neon/15 font-mono">Gson</span>
+                    </div>
+                    <a href="https://github.com/luizhrx/buscador-filmes" target="_blank"
+                       class="w-full py-2.5 flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-gray-300 rounded text-sm font-medium hover:bg-neon hover:text-[#020817] hover:border-neon transition-all duration-300">
+                        <i data-lucide="github" class="w-4 h-4"></i>Ver no GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===== PROJETO 2: Conta Bancária ===== -->
+            <div class="project-card relative bg-slate-900/80 rounded-xl overflow-hidden border border-white/8 flex flex-col h-full"
+                 data-aos="fade-up" data-aos-delay="100">
+
+                <div class="relative h-48 overflow-hidden bg-slate-800">
+                    <img src="img/conta.jpg" alt="Conta Bancária"
+                         class="w-full h-full object-cover"
+                         onerror="this.style.display='none'">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="credit-card" class="text-gray-700 w-14 h-14"></i>
+                    </div>
+                    <div class="project-overlay rounded-t-xl">
+                        <a href="https://github.com/luizhrx/projeto-Conta_Bancaria" target="_blank"
+                           class="flex items-center gap-2 px-5 py-2.5 bg-white/10 border border-white/20 text-white text-sm font-medium rounded hover:bg-white hover:text-black transition-all backdrop-blur-sm">
+                            <i data-lucide="github" class="w-4 h-4"></i>GitHub
+                        </a>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                </div>
+
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-xs font-mono text-electric/40 mb-2">// projeto_02</span>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 leading-tight">
+                        Conta Bancária <span class="text-electric/60 text-base">(Python)</span>
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-5 flex-grow leading-relaxed">
+                        Projeto de console que simula operações bancárias básicas, demonstrando os conceitos
+                        fundamentais de Programação Orientada a Objetos (POO) em Python.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs bg-electric/8 text-electric px-2.5 py-1 rounded border border-electric/15 font-mono">Python</span>
+                        <span class="text-xs bg-electric/8 text-electric px-2.5 py-1 rounded border border-electric/15 font-mono">POO</span>
+                    </div>
+                    <a href="https://github.com/luizhrx/projeto-Conta_Bancaria" target="_blank"
+                       class="w-full py-2.5 flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-gray-300 rounded text-sm font-medium hover:bg-electric hover:text-white hover:border-electric transition-all duration-300">
+                        <i data-lucide="github" class="w-4 h-4"></i>Ver no GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===== PROJETO 3: Controle de Estoque ===== -->
+            <div class="project-card relative bg-slate-900/80 rounded-xl overflow-hidden border border-white/8 flex flex-col h-full"
+                 data-aos="fade-up" data-aos-delay="200">
+
+                <div class="relative h-48 overflow-hidden bg-slate-800">
+                    <img src="img/controle.jpg" alt="Controle de Estoque"
+                         class="w-full h-full object-cover"
+                         onerror="this.style.display='none'">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="package" class="text-gray-700 w-14 h-14"></i>
+                    </div>
+                    <div class="project-overlay rounded-t-xl">
+                        <a href="https://github.com/luizhrx/ControleDeEstoque" target="_blank"
+                           class="flex items-center gap-2 px-5 py-2.5 bg-white/10 border border-white/20 text-white text-sm font-medium rounded hover:bg-white hover:text-black transition-all backdrop-blur-sm">
+                            <i data-lucide="github" class="w-4 h-4"></i>GitHub
+                        </a>
+                    </div>
+                    <div class="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                </div>
+
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-xs font-mono text-neon/40 mb-2">// projeto_03</span>
+                    <h3 class="text-xl font-display font-bold text-white mb-3 leading-tight">
+                        Controle de Estoque <span class="text-neon/60 text-base">(Java)</span>
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-5 flex-grow leading-relaxed">
+                        Sistema de gerenciamento para pequenos negócios. Aplica POO em Java para controle
+                        estruturado e eficiente de produtos no estoque.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs bg-neon/8 text-neon px-2.5 py-1 rounded border border-neon/15 font-mono">Java</span>
+                        <span class="text-xs bg-neon/8 text-neon px-2.5 py-1 rounded border border-neon/15 font-mono">POO</span>
+                    </div>
+                    <a href="https://github.com/luizhrx/ControleDeEstoque" target="_blank"
+                       class="w-full py-2.5 flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-gray-300 rounded text-sm font-medium hover:bg-neon hover:text-[#020817] hover:border-neon transition-all duration-300">
+                        <i data-lucide="github" class="w-4 h-4"></i>Ver no GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===== ADICIONE NOVOS PROJETOS AQUI ===== -->
+
+        </div>
+
+        
+        <div class="text-center mt-12" data-aos="fade-up">
+            <a href="https://github.com/luizhrx" target="_blank"
+               class="inline-flex items-center gap-3 px-8 py-3 border border-white/10 text-gray-400 rounded text-sm font-medium hover:border-neon/40 hover:text-neon hover:bg-neon/5 transition-all duration-300">
+                <i data-lucide="github" class="w-4 h-4"></i>
+                Ver todos os projetos no GitHub
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </div>
+</section>

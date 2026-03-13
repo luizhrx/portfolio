@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luiz Henrique | Portfólio</title>
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon:     '#00ff9d', 
+                        electric: '#3b82f6', 
+                    },
+                    fontFamily: {
+                        display: ['Syne', 'sans-serif'],
+                        mono:    ['JetBrains Mono', 'monospace'],
+                        sans:    ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="bg-[#020817] text-gray-300 overflow-x-hidden">
+
+
+    <div id="slot-navbar"></div>
+    <div id="slot-hero"></div>
+    <div id="slot-sobre"></div>
+    <div id="slot-projetos"></div>
+    <div id="slot-contato"></div>
+    <div id="slot-footer"></div>
+
+    
+    <script>
+       
+        async function loadComponent(slotId, filePath) {
+            try {
+                const response = await fetch(filePath);
+
+                if (!response.ok) {
+                    console.warn(`Componente não encontrado: ${filePath}`);
+                    return;
+                }
+
+                const html = await response.text();
+                document.getElementById(slotId).innerHTML = html;
+
+                lucide.createIcons();
+
+            } catch (error) {
+                console.error(`Erro ao carregar ${filePath}:`, error);
+            }
+        }
+
+        async function loadAllComponents() {
+           
+            await Promise.all([
+                loadComponent('slot-navbar',   'components/navbar.html'),
+                loadComponent('slot-hero',     'components/hero.html'),
+                loadComponent('slot-sobre',    'components/sobre.html'),
+                loadComponent('slot-projetos', 'components/projetos.html'),
+                loadComponent('slot-contato',  'components/contato.html'),
+                loadComponent('slot-footer',   'components/footer.html'),
+            ]);
+
+            if (typeof AOS !== 'undefined') {
+                AOS.refresh();
+            }
+
+            const script = document.createElement('script');
+            script.src = 'js/script.js';
+            document.body.appendChild(script);
+        }
+
+        loadAllComponents();
+
+    </script>
+
+</body>
+</html>

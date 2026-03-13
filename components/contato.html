@@ -1,0 +1,74 @@
+<!-- =============================================================================
+     components/contato.html — Seção de Contato
+============================================================================= -->
+
+<section id="contato" class="py-24 relative overflow-hidden" style="background: #050d1a;">
+
+    
+    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-electric/30 to-transparent"></div>
+
+    
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[300px] bg-neon/4 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- Título -->
+        <div class="text-center mb-12" data-aos="fade-up">
+            <span class="text-xs font-mono text-neon/60 tracking-widest uppercase">// contato.ts</span>
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-white mt-3 mb-4">
+                Vamos <span class="text-neon">Conversar?</span>
+            </h2>
+            <p class="text-gray-500">
+                Disponível para projetos, estágios ou só trocar ideia sobre tecnologia.
+            </p>
+        </div>
+
+        
+        <div class="glass rounded-2xl border border-white/8 p-8 md:p-12 text-center"
+             data-aos="fade-up" data-aos-delay="100"
+             style="box-shadow: 0 0 80px rgba(0,255,157,0.05), 0 0 0 1px rgba(255,255,255,0.05);">
+
+            <!-- Botão de email — href="mailto:" abre o app de email do usuário -->
+            <a href="mailto:luizlopeszx1@gmail.com"
+               class="group inline-flex items-center gap-3 px-6 py-4 rounded-xl border border-white/8 hover:border-neon/40 bg-white/2 hover:bg-neon/5 transition-all duration-300 mb-6 w-full justify-center">
+                <div class="w-8 h-8 rounded bg-neon/10 border border-neon/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i data-lucide="mail" class="text-neon w-4 h-4"></i>
+                </div>
+                <span class="text-gray-300 group-hover:text-white transition-colors font-mono text-sm">
+                    luizlopeszx1@gmail.com
+                </span>
+            </a>
+
+            <!-- Botão WhatsApp — href="https://wa.me/..." abre conversa no WhatsApp -->
+            <a href="https://wa.me/558387147830" target="_blank"
+               class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-sm font-display hover:bg-[#1fb85a] transition-all transform hover:scale-105 w-full justify-center mb-8"
+               style="box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                Chamar no WhatsApp
+            </a>
+
+            
+            <div class="flex items-center gap-4 mb-6">
+                <div class="flex-1 h-px bg-white/5"></div>
+                <span class="text-xs font-mono text-gray-600 tracking-widest uppercase">Outras redes</span>
+                <div class="flex-1 h-px bg-white/5"></div>
+            </div>
+
+            
+            <div class="flex gap-4 justify-center">
+                <a href="https://www.linkedin.com/in/luizhrx/" target="_blank"
+                   class="social-icon w-12 h-12 rounded-xl bg-white/4 border border-white/8 flex items-center justify-center text-gray-500 hover:text-[#0077b5] hover:border-[#0077b5]/40 hover:bg-[#0077b5]/10 transition-all">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="https://github.com/luizhrx" target="_blank"
+                   class="social-icon w-12 h-12 rounded-xl bg-white/4 border border-white/8 flex items-center justify-center text-gray-500 hover:text-white hover:border-white/30 hover:bg-white/8 transition-all">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+                <a href="https://instagram.com/_luizhrx" target="_blank"
+                   class="social-icon w-12 h-12 rounded-xl bg-white/4 border border-white/8 flex items-center justify-center text-gray-500 hover:text-pink-400 hover:border-pink-400/30 hover:bg-pink-400/8 transition-all">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

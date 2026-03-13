@@ -1,0 +1,45 @@
+<!-- =============================================================================
+     components/navbar.html — Barra de navegação fixa
+============================================================================= -->
+
+<nav class="fixed w-full z-50 glass border-b border-white/5" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-18 py-4">
+
+            <div class="flex-shrink-0" onclick="scrollToSection('home')">
+                <h1 class="text-xl font-display font-bold text-white tracking-tight cursor-pointer select-none">
+                    Luiz<span class="text-neon" style="text-shadow: 0 0 15px rgba(0,255,157,0.5)">.dev</span>
+                </h1>
+            </div>
+
+            <!-- Links de navegação — visíveis apenas em telas médias (md) e maiores -->
+            <div class="hidden md:flex items-center gap-8">
+                <button onclick="scrollToSection('home')"     class="nav-link text-gray-400 hover:text-white transition-colors text-sm font-medium tracking-wide" data-section="home">Início</button>
+                <button onclick="scrollToSection('sobre')"    class="nav-link text-gray-400 hover:text-white transition-colors text-sm font-medium tracking-wide" data-section="sobre">Sobre</button>
+                <button onclick="scrollToSection('projetos')" class="nav-link text-gray-400 hover:text-white transition-colors text-sm font-medium tracking-wide" data-section="projetos">Projetos</button>
+                <button onclick="scrollToSection('contato')"  class="nav-link text-gray-400 hover:text-white transition-colors text-sm font-medium tracking-wide" data-section="contato">Contato</button>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="https://github.com/luizhrx" target="_blank"
+                   class="flex items-center gap-2 px-4 py-2 rounded border border-neon/30 text-neon text-sm font-mono hover:bg-neon/10 transition-all hover:border-neon/70">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    GitHub
+                </a>
+            </div>
+
+            <button onclick="toggleMenu()" class="md:hidden text-gray-400 hover:text-white transition-colors p-2">
+                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden glass border-t border-white/5">
+        <div class="px-4 py-4 space-y-1">
+            <button onclick="scrollToSection('home')"     class="block w-full text-left text-gray-300 hover:text-neon px-3 py-3 text-sm font-medium transition-colors border-b border-white/5">Início</button>
+            <button onclick="scrollToSection('sobre')"    class="block w-full text-left text-gray-300 hover:text-neon px-3 py-3 text-sm font-medium transition-colors border-b border-white/5">Sobre</button>
+            <button onclick="scrollToSection('projetos')" class="block w-full text-left text-gray-300 hover:text-neon px-3 py-3 text-sm font-medium transition-colors border-b border-white/5">Projetos</button>
+            <button onclick="scrollToSection('contato')"  class="block w-full text-left text-gray-300 hover:text-neon px-3 py-3 text-sm font-medium transition-colors">Contato</button>
+        </div>
+    </div>
+</nav>
