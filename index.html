@@ -49,49 +49,47 @@
 
     
     <script>
-       
-        async function loadComponent(slotId, filePath) {
-            try {
-                const response = await fetch(filePath);
-
-                if (!response.ok) {
-                    console.warn(`Componente não encontrado: ${filePath}`);
-                    return;
-                }
-
-                const html = await response.text();
-                document.getElementById(slotId).innerHTML = html;
-
-                lucide.createIcons();
-
-            } catch (error) {
-                console.error(`Erro ao carregar ${filePath}:`, error);
+    async function loadComponent(slotId, filePath) {
+        try {
+            const response = await fetch(filePath);
+            if (!response.ok) {
+                console.warn(`Componente não encontrado: ${filePath}`);
+                return;
             }
+            const html = await response.text();
+            document.getElementById(slotId).innerHTML = html;
+
+            // ❌ REMOVIDO: lucide.createIcons() daqui
+
+        } catch (error) {
+            console.error(`Erro ao carregar ${filePath}:`, error);
+        }
+    }
+
+    async function loadAllComponents() {
+        await Promise.all([
+            loadComponent('slot-navbar',   'components/navbar.html'),
+            loadComponent('slot-hero',     'components/hero.html'),
+            loadComponent('slot-sobre',    'components/sobre.html'),
+            loadComponent('slot-projetos', 'components/projetos.html'),
+            loadComponent('slot-contato',  'components/contato.html'),
+            loadComponent('slot-footer',   'components/footer.html'),
+        ]);
+
+        // ✅ Roda UMA VEZ só, depois que TODOS os componentes estão no DOM
+        lucide.createIcons();
+
+        if (typeof AOS !== 'undefined') {
+            AOS.refresh();
         }
 
-        async function loadAllComponents() {
-           
-            await Promise.all([
-                loadComponent('slot-navbar',   'components/navbar.html'),
-                loadComponent('slot-hero',     'components/hero.html'),
-                loadComponent('slot-sobre',    'components/sobre.html'),
-                loadComponent('slot-projetos', 'components/projetos.html'),
-                loadComponent('slot-contato',  'components/contato.html'),
-                loadComponent('slot-footer',   'components/footer.html'),
-            ]);
+        const script = document.createElement('script');
+        script.src = 'js/script.js';
+        document.body.appendChild(script);
+    }
 
-            if (typeof AOS !== 'undefined') {
-                AOS.refresh();
-            }
-
-            const script = document.createElement('script');
-            script.src = 'js/script.js';
-            document.body.appendChild(script);
-        }
-
-        loadAllComponents();
-
-    </script>
+    loadAllComponents();
+</script>
 
 </body>
 </html>
